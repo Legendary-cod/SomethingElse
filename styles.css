@@ -1,0 +1,138 @@
+/* 
+The * selector targets all elements on the page.
+This resets default padding, margin, and sets box-sizing for better control over layout. 
+*/
+* {
+    padding: 0; /* Removes any default padding around elements */
+    margin: 0; /* Removes any default margin around elements */
+    box-sizing: border-box; /* Includes padding and border in element's width/height, making layout easier to control */
+}
+
+body {
+    /* Styles for the body of the page */
+    font-family: "Montserrat", serif; /* Sets the font for the entire webpage */
+}
+
+.main-header {
+    /* Styles for the header area of the page */
+    height: 100px; /* Sets the header height to 100 pixels */
+    width: 100%; /* Makes the header take up the full width of the page */
+    background-color: #f3f3f3; /* Light gray background color for the header */
+    display: flex; /* Enables flexbox, a layout system to align items easily */
+    align-items: center; /* Centers items (like logo and menu) vertically within the header */
+}
+
+.logo {
+    /* Styling for the logo section in the header */
+    margin-right: 60%; /* Pushes the logo section away from the right side, creating space for the menu */
+    margin-left: 10%; /* Adds space to the left of the logo */
+}
+
+.menu {
+    /* Placeholder styling for the menu section */
+    /* Currently no styles applied */
+}
+
+.logo img {
+    /* Styling for the logo image itself */
+    height: 80px; /* Sets a fixed height of 80 pixels */
+    width: 80px; /* Sets a fixed width of 80 pixels */
+    border-radius: 50%; /* Rounds the image to make it a circle */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+
+.main {
+    /* Main content section styles */
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    background: #bfbfbf; /* Light yellow background color */
+}
+
+.about-intro {
+    /* Styles for the section containing the user's image and introduction */
+    position: relative; /* Allows precise control over positioning of child elements */
+    display: flex; /* Flexbox layout places items (image and text) side by side */
+    width: 70%; /* Sets the section's width to 70% of its container */
+    height: 80vh; /* Sets the height to 80% of the viewport */
+    background: #f3f3f3; /* Light gray background for the intro section */
+    margin: auto; /* Centers the section horizontally */
+    top: 10%; /* Pushes the section slightly down from the top */
+}
+
+.my-image {
+    /* Styling for the image container within the about-intro section */
+    position: relative; /* Allows fine control of positioning */
+    width: 50%; /* Takes up half of the parent section's width */
+}
+
+.my-image img {
+    /* Styling for the image inside the image container */
+    position: absolute; /* Enables precise placement within the container */
+    left: 6%; /* Moves the image slightly to the right */
+    top: -8%; /* Moves the image upward for slight overlap */
+    width: 90%; /* Sets the image width to 90% of its container */
+    height: 95%; /* Sets the image height to 95% of its container */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+}
+
+.about-content {
+    /* Styles for the content section within about-intro */
+    width: 50%; /* Takes up the remaining half of the parent section's width */
+    padding: 1em; /* Adds padding around the content */
+}
+
+.about-content h1 {
+    /* Styling for the introduction heading */
+    font-size: 3.2em; /* Sets the font size for the heading */
+    font-weight: 500; /* Makes the font slightly bold */
+    color: #333; /* Dark gray font color */
+}
+
+.about-content p {
+    /* Styling for the descriptive paragraph */
+    font-size: 1.2em; /* Sets the font size for the paragraph */
+    margin-top: 5%; /* Adds space above the paragraph */
+    line-height: 1.6; /* Increases line spacing for readability */
+    text-align: justify; /* Aligns text evenly on both sides */
+    margin-bottom: 7%; /* Adds space below the paragraph */
+}
+
+.about-content a {
+    /* Styling for the "About Me" link */
+    text-decoration: none; /* Removes underline from the link */
+    color: #333; /* Dark gray text color */
+    font-size: 1.2em; /* Sets the font size for the link text */
+    border: 2px solid #d9b737; /* Adds a solid border around the link */
+    font-weight: 500; /* Makes the font slightly bold */
+    padding: 1em; /* Adds padding around the link text */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Responsive styles for screens smaller than 768px */
+
+    .about-intro {
+        /* Adjust layout for smaller screens */
+        width: 90%; /* Makes the section wider to occupy most of the screen */
+        height: auto; /* Adjusts height to fit content */
+        flex-direction: column; /* Stacks child elements vertically */
+    }
+
+    .about-content {
+        /* Adjusts content width for smaller screens */
+        width: 100%; /* Makes content take full width */
+    }
+
+    .about-content h1 {
+        font-size: 2em; /* Reduces font size of the heading */
+    }
+
+    .about-content p {
+        font-size: 1em; /* Reduces font size of the paragraph */
+    }
+
+    .my-image {
+        /* Adjusts the image container for smaller screens */
+        height: 50vh; /* Sets the height to half the viewport height */
+        width: 100%; /* Makes the container take full width */
+    }
+}
